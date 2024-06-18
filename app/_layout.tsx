@@ -12,6 +12,7 @@ import { ThemedText } from '@/components/ThemedText';
 import { green } from 'react-native-reanimated/lib/typescript/reanimated2/Colors';
 import { IconButton } from 'react-native-paper';
 import { HelloWave } from '@/components/HelloWave';
+import {AppProvider}  from "../context/AppProvider.jsx"
 
 // Prevent the splash screen from auto-hiding before asset loading is complete.
 SplashScreen.preventAutoHideAsync();
@@ -33,6 +34,7 @@ export default function RootLayout() {
   }
 
   return (
+    <AppProvider>
     <ThemeProvider value={colorScheme === 'dark' ? DarkTheme : DefaultTheme}>
       <SafeAreaView>
         <View style={{padding: 24,display:'flex',flexDirection:'row',justifyContent: 'space-between'}}>
@@ -52,5 +54,6 @@ export default function RootLayout() {
         <Stack.Screen name="+not-found" />
       </Stack>
     </ThemeProvider>
+    </AppProvider>
   );
 }

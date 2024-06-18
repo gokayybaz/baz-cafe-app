@@ -1,3 +1,9 @@
+export const basketProducts = [
+    
+]
+
+
+
 export default dailyProducts = [
     {
         id: 1,

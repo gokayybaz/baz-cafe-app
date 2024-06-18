@@ -13,5 +13,5 @@
     "**/*.tsx",
     ".expo/types/**/*.ts",
     "expo-env.d.ts"
-  ]
+, "components/DailyProduct.jsx", "components/BasketProduct.jsx"  ]
 }
